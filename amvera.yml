@@ -1,12 +1,10 @@
-meta:
-  environment: node
-  toolchain:
-    name: npm
-    version: 22
+version: "1"
 
-run:
-  build:
-    command: npm install && npm run build
+services:
+  app:
+    build:
+      context: .
+      command: npm install && npm run build
 
-  start:
-    command: npx serve dist
+    start:
+      command: npx serve -s dist -l 3000
