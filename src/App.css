@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f3f3;
+}
+
+.app {
+  padding: 20px;
+}
+
+.question {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  white-space: pre-line; /* Позволяет отображать переносы строк в вопросах */
+}
+
+.answers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.answer {
+  height: 100px;
+  border: none;
+  border-radius: 20px;
+  font-size: 24px;
+  background: white;
+  cursor: pointer;
+}
+
+.correct {
+  background: #8cffb2;
+}
+
+.wrong {
+  background: #ff9b9b;
+}
+
+/* Стили для модального окна (поверх всего) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 30px;
+  padding: 30px;
+  max-width: 500px;
+  width: 85%;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.modal-explanation {
+  font-size: 22px;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  white-space: pre-line; /* Для аккуратного отображения дат с новой строки */
+}
+
+.modal-next {
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.modal-next:hover {
+  background: #357abd;
+}
+
+/* Стиль для кнопки "Начать новый тест" на экране результатов */
+.new-quiz-button {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 22px;
+  background: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.new-quiz-button:hover {
+  background: #357abd;
+}
+.question {
+  flex-direction: column;  /* картинка над текстом */
+}
+
+.question-image {
+  max-width: 90%;
+  max-height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.question-text {
+  text-align: center;
+}
