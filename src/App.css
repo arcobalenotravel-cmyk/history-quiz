@@ -122,3 +122,19 @@ body {
 .question-text {
   text-align: center;
 }
+/* Мобильная адаптация – только для вопроса уменьшаем шрифт, ответы не трогаем */
+@media (max-width: 768px) {
+  .question {
+    font-size: 24px;   /* было 28px – чуть-чуть меньше */
+    padding: 20px;
+  }
+
+  .answer {
+    height: auto;          /* динамическая высота кнопки */
+    min-height: 70px;      /* чтобы не сжималась слишком сильно */
+    font-size: 24px;       /* явно оставляем 24px, как в исходнике */
+    white-space: normal;   /* разрешаем перенос строк (по словам) */
+    word-break: normal;    /* не ломаем слова */
+    padding: 12px;
+  }
+}
